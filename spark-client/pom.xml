@@ -29,7 +29,7 @@
   <artifactId>spark-client</artifactId>
   <packaging>jar</packaging>
   <name>Spark Remote Client</name>
-  <version>1.1.0</version>
+  <version>1.1.0+SquidSolutions</version>
 
   <properties>
     <hive.path.to.root>..</hive.path.to.root>
