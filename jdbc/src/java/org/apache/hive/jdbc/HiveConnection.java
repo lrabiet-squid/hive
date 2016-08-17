@@ -1195,8 +1195,8 @@ public class HiveConnection implements java.sql.Connection {
 
   @Override
   public void setAutoCommit(boolean autoCommit) throws SQLException {
-    if (autoCommit) {
-      throw new SQLException("enabling autocommit is not supported");
+    if (!autoCommit) {
+      throw new SQLException("disabling autocommit is not supported");
     }
   }
 
@@ -1267,8 +1267,9 @@ public class HiveConnection implements java.sql.Connection {
 
   @Override
   public void setReadOnly(boolean readOnly) throws SQLException {
-    // TODO Auto-generated method stub
-    throw new SQLException("Method not supported");
+    if(readOnly){
+    	throw new SQLException("Method not supported");
+    }
   }
 
   /*
